@@ -11,6 +11,9 @@ $blue: hsl(248, 32%, 49%);
 $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 
+// Media width breakpoints
+$medium: "(min-width: 768px)";
+
 @mixin shadow($color: hsl(0, 64%, 65%), $size: 0.45em) {
     box-shadow: 0px $size 0px 0px $color;
 }
@@ -25,6 +28,13 @@ body {
         size: 1em;
         family: 'Poppins', sans-serif;
     }
+
+    @media #{$medium} {
+        background: url("../images/bg-intro-desktop.png"), $red {
+            position: center;
+            repeat: repeat;
+        }
+    }
 }
 *, * *, *::after, *::before {
     box-sizing: border-box;
@@ -32,12 +42,29 @@ body {
 
 main {
     min-height: 100vh;
+    max-width: min(100vw, 600px);
     display: flex;
     justify-content: center;
     align-items: center;
+    
     flex: {
         direction: column;
         wrap: nowrap;
+    }
+
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    @media #{$medium} {
+        max-width: min(90vw, 1000px);
+        flex-direction: row;
+        gap: 2em;
+
+        & > * {
+            width: 50%;
+        }
     }
 }
 
@@ -48,6 +75,10 @@ main {
 
     h1 {
         line-height: 1.25em;
+    }
+
+    @media #{$medium} {
+        text-align: left;
     }
 }
 

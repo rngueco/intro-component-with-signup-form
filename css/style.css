@@ -6,6 +6,13 @@ body {
   font-size: 1em;
   font-family: "Poppins", sans-serif;
 }
+@media (min-width: 768px) {
+  body {
+    background: url("../images/bg-intro-desktop.png"), #ff7a7a;
+    background-position: center;
+    background-repeat: repeat;
+  }
+}
 
 *, * *, *::after, *::before {
   box-sizing: border-box;
@@ -13,11 +20,24 @@ body {
 
 main {
   min-height: 100vh;
+  max-width: min(100vw, 600px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  main {
+    max-width: min(90vw, 1000px);
+    flex-direction: row;
+    gap: 2em;
+  }
+  main > * {
+    width: 50%;
+  }
 }
 
 .content {
@@ -27,6 +47,11 @@ main {
 }
 .content h1 {
   line-height: 1.25em;
+}
+@media (min-width: 768px) {
+  .content {
+    text-align: left;
+  }
 }
 
 .signup {
