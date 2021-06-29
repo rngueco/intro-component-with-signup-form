@@ -51,6 +51,7 @@ main {
 @media (min-width: 768px) {
   .content {
     text-align: left;
+    padding: 2em;
   }
 }
 
@@ -79,11 +80,13 @@ main {
   box-shadow: 0px 0.45em 0px 0px #df6d6d;
   background-color: white;
   padding: 1.5em;
+  position: relative;
 }
 .signup__form input {
   width: 100%;
   height: 3em;
   padding: 0 1em;
+  margin-top: 0.9em;
   font-family: inherit;
   font-weight: bolder;
 }
@@ -91,8 +94,28 @@ main {
   border: 1px solid #e4e2e2;
   border-radius: 4px;
 }
-.signup__form input:not(:last-child) {
-  margin-bottom: 0.9em;
+.signup__form input + span.error-icon {
+  position: absolute;
+  right: 2.5em;
+  padding-top: 1.25em;
+}
+.signup__form input + span.error-icon img {
+  height: 1em;
+  width: 1em;
+}
+.signup__form input ~ span.error-message {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-top: 0;
+  color: #ff7a7a;
+  font-size: 0.65em;
+  font-style: italic;
+  font-weight: 500;
+}
+.signup__form input.error {
+  border: 2px solid #ff7a7a;
 }
 
 input[type=submit] {

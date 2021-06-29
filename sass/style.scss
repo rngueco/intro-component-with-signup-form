@@ -79,6 +79,7 @@ main {
 
     @media #{$medium} {
         text-align: left;
+        padding: 2em;
     }
 }
 
@@ -111,11 +112,13 @@ main {
 
     background-color: white;
     padding: 1.5em;
+    position: relative;
 
     input {
         width: 100%;
         height: 3em;
         padding: 0 1em;
+        margin-top: 0.9em;
         font: {
             family: inherit;
             weight: bolder;
@@ -127,8 +130,34 @@ main {
             border-radius: 4px;
         }
 
-        &:not(:last-child) {
-            margin-bottom: 0.9em;
+        & + span.error-icon {
+            position: absolute;
+            right: 2.5em;
+            padding-top: 1.25em;
+
+            img {
+                height: 1em;
+                width: 1em;
+            }
+        }
+
+        & ~ span.error-message {
+            position: relative;
+            display: block;
+            width: 100%;
+            text-align: right;
+            padding-top: 0;
+            color: $red;
+
+            font: {
+                size: 0.65em;
+                style: italic;
+                weight: 500;
+            }
+        }
+
+        &.error {
+            border: 2px solid $red;
         }
     }
 }
