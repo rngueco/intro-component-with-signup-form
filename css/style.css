@@ -33,7 +33,7 @@ main {
   main {
     max-width: min(90vw, 1000px);
     flex-direction: row;
-    gap: 2em;
+    gap: 1em;
   }
   main > * {
     width: 50%;
@@ -51,7 +51,11 @@ main {
 @media (min-width: 768px) {
   .content {
     text-align: left;
-    padding: 2em;
+    padding: 1.5em;
+    font-size: 0.9em;
+  }
+  .content h1 {
+    font-size: 2.5em;
   }
 }
 
@@ -74,6 +78,7 @@ main {
   padding: 0.5em;
   text-align: inherit;
   color: white;
+  font-size: 0.8em;
 }
 
 .signup__form {
