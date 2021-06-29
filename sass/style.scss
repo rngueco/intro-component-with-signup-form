@@ -173,9 +173,17 @@ input[type="submit"] {
     font-weight: lighter;
     letter-spacing: 1px;
     padding-top: 6px;
+    cursor: pointer;
+
+    &:hover {
+        @include shadow($green, 0.3em);
+        background-color: hsl(154, 75%, 58%);
+    }
 }
 
 .terms-notice {
+    display: block;
+    margin-top: 1em;
     padding: 0.5em;
     font-size: 0.75em;
     color: $grayish-blue;

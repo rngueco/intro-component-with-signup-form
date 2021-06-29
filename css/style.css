@@ -128,9 +128,16 @@ input[type=submit] {
   font-weight: lighter;
   letter-spacing: 1px;
   padding-top: 6px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  box-shadow: 0px 0.3em 0px 0px #38cc8c;
+  background-color: #44e49f;
 }
 
 .terms-notice {
+  display: block;
+  margin-top: 1em;
   padding: 0.5em;
   font-size: 0.75em;
   color: #b9b6d3;
