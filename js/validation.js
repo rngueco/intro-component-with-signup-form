@@ -28,8 +28,8 @@ function addErrorMessage(e) {
     error_message.setAttribute("data-id", name);
     error_message.classList.add('error-message');
 
-    if (e.target.value == "" || e.target.value == null) error_message.innerHTML = " " + e.target.getAttribute("placeholder") + " is required.";
-    else error_message.innerHTML = "Please enter a valid " + e.target.getAttribute("placeholder") + ".";
+    if (e.target.value == "" || e.target.value == null) error_message.innerHTML = "" + e.target.getAttribute("placeholder") + " cannot be empty.";
+    else error_message.innerHTML = "Looks like this is not an " + e.target.getAttribute("placeholder") + ".";
 
     // Append error icon and message after input element
     e.target.after(error_message);
